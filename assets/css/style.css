@@ -1,0 +1,56 @@
+.primolink {
+    color: #264653;
+}
+
+.primolink:hover {
+    color: whitesmoke;
+}
+
+.titoli1, .titoli2 {
+    color: #264653;
+}
+
+.titoli2 {
+    font-size: 50px;
+}
+
+.celle tr td {
+    font-size: 30px;
+    padding: 10px;
+    color: #2a9d8f;
+}
+
+#info {
+    border: solid whitesmoke 2px;
+     box-shadow: 2 2 2 2;
+      padding:50px;
+       box-shadow: 5px 10px whitesmoke;
+}
+
+#info input {
+    width: 30%;
+    background: #FFF;
+    margin-bottom: 5px;
+    padding: 10px;
+} 
+
+#info textarea {
+    width: 99%;
+    background: #FFF;
+    margin-bottom: 5px;
+    padding: 10px;
+    height: 100px;
+}
+
+#info button{
+    border: none;
+    background-color: #2a9d8f;
+    color: #FFF;
+    padding: 10px;
+    font-size: 15px;
+}
+
+#info button:hover {
+    background-color: #25cfbb;
+    color: #264653;
+}
