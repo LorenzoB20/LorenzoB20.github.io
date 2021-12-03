@@ -1,56 +1,31 @@
-.primolink {
-    color: #264653;
+* {
+    font-family: 'Montserrat', sans-serif;
+    color: white;
 }
 
-.primolink:hover {
-    color: whitesmoke;
+#sez1 {
+    min-height: 100vh;
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("/assets/img/sfondo1.jpg");
+    background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-.titoli1, .titoli2 {
-    color: #264653;
+.bg {
+    background-color: #ffffff10;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 10px;
+    padding: 50px;
 }
 
-.titoli2 {
-    font-size: 50px;
-}
-
-.celle tr td {
-    font-size: 30px;
+.skills {
+    border: solid 1px white;
+    border-radius: 10px;
     padding: 10px;
-    color: #2a9d8f;
-}
-
-#info {
-    border: solid whitesmoke 2px;
-     box-shadow: 2 2 2 2;
-      padding:50px;
-       box-shadow: 5px 10px whitesmoke;
-}
-
-#info input {
-    width: 30%;
-    background: #FFF;
-    margin-bottom: 5px;
-    padding: 10px;
-} 
-
-#info textarea {
-    width: 99%;
-    background: #FFF;
-    margin-bottom: 5px;
-    padding: 10px;
-    height: 100px;
-}
-
-#info button{
-    border: none;
-    background-color: #2a9d8f;
-    color: #FFF;
-    padding: 10px;
-    font-size: 15px;
-}
-
-#info button:hover {
-    background-color: #25cfbb;
-    color: #264653;
+    margin: 5px;
 }
