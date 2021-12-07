@@ -44,8 +44,18 @@ html {
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     border-radius: 10px;
-    padding: 50px;
+    padding: 30px;
     margin-top:100px;
+}
+
+.bg3 {
+    background-color: #070161;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 10px;
+    padding: 30px;
+    margin-top:100px;
+    margin-bottom:100px;
 }
 
 .respimg {
@@ -337,5 +347,17 @@ html {
 
         .button2 {
             margin-bottom: 10px;
+        }
+
+        .titolopar {
+            font-size: 55px;
+        }
+
+        .sottotitolopar {
+            font-size: 30px;
+        }
+
+        .paragrafo {
+            font-size: 18px;
         }
 }
