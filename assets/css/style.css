@@ -20,7 +20,15 @@ html {
 }
 
 #sez2 {
-    background-color: blue;
+    background-color: whitesmoke;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    flex-direction: column;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .bg {
@@ -28,7 +36,21 @@ html {
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     border-radius: 10px;
+    padding: 30px;
+}
+
+.bg2 {
+    background-color: #070161;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 10px;
     padding: 50px;
+    margin-top:100px;
+}
+
+.respimg {
+    width: 80%;
+    margin-left: 40px;
 }
 
 .skills {
@@ -57,12 +79,7 @@ html {
 
 .intestazione {
     padding-top: 20px;
-    padding-bottom: 50px;
-}
-
-.respimg {
-    width: 80%;
-    margin-left: 40px;
+    padding-bottom: 30px;
 }
 
 .learn {
@@ -196,6 +213,30 @@ html {
     }
   }
   
+.titolopar {
+    text-align: center;
+    font-size: 70px;
+    font-weight: 600;
+}
+
+.sottotitolopar {
+    text-align: center;
+    font-weight: 500;
+    font-size: 40px;
+}
+
+.paragrafo {
+    font-size: 25px;
+    font-weight: 400;
+}
+
+@media screen and (max-width: 1199px) {
+    #section02 a span {
+        display: none;
+      }
+}
+
+/* RESPONSIVE 1024PX */
 
 @media screen and (max-width: 1024px) {
     .intestazione {
@@ -204,17 +245,10 @@ html {
 .respimg {
     width: 90%;
 }
-    .box-skills {
-        flex-direction: column;
-        align-items:stretch;
-        text-align: center;
-    }
-
-.bottoni {
-margin-left: 80px;
+    
 }
 
-}
+/* RESPONSIVE 768PX */
 
 @media screen and (max-width: 768px) {
     .respimg {
@@ -232,20 +266,30 @@ margin-left: 80px;
 
     .learn {
         padding-left: 0px;
+        padding-top: 25px;
+        text-align: center;
     }
     
     .divskills {
-        padding-left: 15px;
+        text-align: center;
     }
-    
+
+    .box-skills {
+        flex-direction: column;
+        align-items:stretch;
+        text-align: center;
+        justify-content: center;
+        align-content: center;
+    }
+
+
     .intestazione {
         padding-top: 10px;
     }
 
-    .bottoni {
-        margin-left: 0px;
-        }
 }
+
+/* RESPONSIVE 576PX */
 
 @media screen and (max-width: 576px) {
     .box-skills {
