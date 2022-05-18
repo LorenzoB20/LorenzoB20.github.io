@@ -187,7 +187,8 @@ header {
 }
 
 .home__text h2 {
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+ sans-serif;
   font-weight: 100;
   color: #404d4e;
   -webkit-animation: slideinleft ease 1s;
@@ -388,7 +389,7 @@ header {
 }
 
 .sec2 .griglia__progetto .progetto__btn:hover {
-  color: #404d4e;
+  color: #1B9AAA;
 }
 
 .sec3 {
