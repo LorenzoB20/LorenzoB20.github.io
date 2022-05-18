@@ -1,0 +1,373 @@
+@import "variables";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+header {
+  height: 10vh;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px 0 10px 10px;
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    margin-left: 15px;
+
+    h1 {
+      @include title;
+      font-size: 1.5rem;
+    }
+
+    & img {
+      border-radius: 50px;
+      z-index: 1;
+      margin-right: 35px;
+    }
+  }
+
+  .menu-nav {
+    display: flex;
+    margin-right: 35px;
+
+    &__item {
+      @include flexcenter;
+      margin: 0 0.8rem;
+      font-family: $font1;
+      padding: 0.5rem;
+
+      &:hover {
+        background-color: $secondary-color;
+        border-radius: 7px;
+      }
+    }
+
+    .active {
+      background: $secondary-color;
+      border-radius: 7px;
+    }
+
+    &__link {
+      color: $color-text;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 18px;
+    }
+  }
+}
+
+.home {
+  height: 80vh;
+  background: $background-color;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+
+  &__img {
+    position: relative;
+    right: 5%;
+    top: 5%;
+
+    img {
+      object-fit: cover;
+      animation: fadeInAnimation ease 1s;
+    }
+
+    // i:nth-child(2) {
+    //   position: absolute;
+    //   font-size: 3rem;
+    //   top: 25%;
+    //   left: 21%;
+    //   color: $color-text;
+    //   z-index: 1;
+    // }
+
+    // i:nth-child(3) {
+    //   position: absolute;
+    //   font-size: 1.5rem;
+    //   top: 25%;
+    //   left: 43%;
+    //   color: $color-text;
+    //   z-index: 1;
+    // }
+
+    // i:nth-child(4) {
+    //   position: absolute;
+    //   font-size: 1rem;
+    //   top: 25%;
+    //   left: 50%;
+    //   color: $color-text;
+    //   z-index: 1;
+    // }
+
+    // i:nth-child(5) {
+    //   position: absolute;
+    //   font-size: 2.3rem;
+    //   top: 25%;
+    //   left: 33%;
+    //   color: $color-text;
+    //   z-index: 1;
+    // }
+
+    // i:nth-child(6) {
+    //   position: absolute;
+    //   font-size: 3.5rem;
+    //   top: 25%;
+    //   left: 7%;
+    //   color: $color-text;
+    //   z-index: 1;
+    // }
+  }
+
+  &__text {
+    position: relative;
+    left: 5%;
+    bottom: 3%;
+    border: solid $color-text;
+    padding: 40px;
+
+    h2 {
+      font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+        sans-serif;
+      font-weight: 100;
+      color: $color-text;
+      animation: slideinleft ease 1s;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 18%;
+        left: 3.5%;
+        width: 3%;
+        height: 2px;
+        background: $secondary-color;
+      }
+    }
+
+    i {
+      font-size: 2rem;
+      color: $color-text;
+      margin-left: 10px;
+    }
+
+    p {
+      color: $color-text;
+      font-size: 1.5rem;
+      font-weight: 500;
+      font-family: $font2;
+      font-weight: 100;
+      animation: slideinleft ease 1s;
+    }
+
+    h1 {
+      @include title;
+      animation: slideintop ease 1s;
+    }
+  }
+
+  &__buttons {
+    margin-top: 4rem;
+
+    .btn {
+      text-decoration: none;
+      padding: 10px 45px;
+    }
+
+    .btn--primary {
+      background: $primary-color;
+      @include buttons;
+      margin: 0 10px 0 0;
+
+      &:hover {
+        background: rgb(3, 255, 188);
+        color: $color-text;
+      }
+    }
+
+    .btn--secondary {
+      background: $tertiary-color;
+      @include buttons;
+
+      &:hover {
+        background: rgb(14, 222, 249);
+        color: $color-text;
+      }
+    }
+  }
+
+  //   .scroll-down {
+  //     height: 50px;
+  //     width: 70px;
+  //     position: absolute;
+  //     left: 50%;
+  //     bottom: 20px;
+  //     border-radius: 50px;
+  //     cursor: pointer;
+  //   }
+
+  //   .scroll-down::before,
+  // .scroll-down::after {
+  //   content: "";
+  //   position: absolute;
+  //   top: 20%;
+  //   left: 50%;
+  //   height: 40px;
+  //   width: 40px;
+  //   transform: translate(-50%, -100%) rotate(45deg);
+  //   border: 2px solid black;
+  //   border-top: transparent;
+  //   border-left: transparent;
+  //   animation: scroll-down 1s ease-in-out infinite;
+  // }
+  // .scroll-down::before {
+  //   top: 30%;
+  //   animation-delay: 0.3s;
+  //   /* animation: scroll-down 1s ease-in-out infinite; */
+  // }
+
+  // @keyframes scroll-down {
+  //   0% {
+  //     /* top:20%; */
+  //     opacity: 0;
+  //   }
+  //   30% {
+  //     opacity: 1;
+  //   }
+  //   60% {
+  //     opacity: 1;
+  //   }
+  //   100% {
+  //     top: 90%;
+  //     opacity: 0;
+  //   }
+  // }
+
+  &::after,
+  &::before {
+    position: absolute;
+    content: "";
+    width: 150px;
+    height: 50px;
+    background: $background-color;
+    bottom: -1em;
+    z-index: 100;
+  }
+
+  &::before {
+    right: 64.9%;
+    transform: skew(0, 20deg);
+  }
+
+  &::after {
+    left: 35%;
+    transform: skew(0, -20deg);
+  }
+}
+
+.sec2 {
+  background: $primary-color;
+  height: 100vh;
+  @include flexcenter;
+  position: relative;
+  z-index: 10;
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 10vw), 0 100%);
+  margin-bottom: -10vw;
+
+  .griglia {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 5em;
+    grid-auto-rows: 33%;
+    position: absolute;
+    top: 10%;
+    left: 5%;
+
+    &__title {
+      grid-column: 1/5;
+      color: $color-text;
+      font-family: $font2;
+      font-size: 80px;
+      padding-bottom: 5rem;
+
+    }
+
+    &__progetto {
+      position: relative;
+        border-bottom: 5px solid $secondary-color;
+        overflow: hidden;
+        cursor: pointer;
+        height: 320px;
+        
+        img {
+          width: 100%;
+      }
+
+      &::after {
+          content: '';
+          position: absolute;
+          top: 100%;
+          left: 0;
+          height: 100%;
+          width: 100%;
+          background: $secondary-color;
+          opacity: 0;
+          @include transition-ease;
+      }
+
+      &:hover {
+          &::after {
+              top:0;
+              opacity: 0.9;
+          }
+          .progetto__btn {
+              opacity: 1;
+          }
+      }
+
+      
+    .progetto__btns {
+      position: absolute;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      align-items: center;
+      text-align: center;
+  }
+
+  .progetto__btn {
+    font-family: $font2;
+    text-decoration: none;
+      opacity: 0;
+      color: $color-text;
+      @include transition-ease;
+
+      &:hover {
+          color: $color-text;
+      }
+  }
+    }
+  }
+}
+
+.sec3 {
+  background: $tertiary-color;
+  height: 100vh;
+  @include flexcenter;
+  position: relative;
+  margin-bottom: -10vw;
+}
