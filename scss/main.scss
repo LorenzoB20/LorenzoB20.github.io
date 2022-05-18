@@ -357,7 +357,7 @@ header {
       @include transition-ease;
 
       &:hover {
-          color: $color-text;
+          color: $tertiary-color;
       }
   }
     }
